@@ -71,8 +71,8 @@ public class RDSDiscovery implements AWSDiscovery {
   public void discover(ObjectMapper mapper, Session session, Region region, Emitter emitter, Logger logger, String account, MagpieAWSClientCreator clientCreator) {
 
     try (final var client = clientCreator.apply(RdsClient.builder()).build()) {
-      discoverDbProxy(mapper, session, region, emitter, account, client);
-      discoverDbSnapshot(mapper, session, region, emitter, account, client);
+//      discoverDbProxy(mapper, session, region, emitter, account, client);
+//      discoverDbSnapshot(mapper, session, region, emitter, account, client);
       discoverDbInstances(mapper, session, region, emitter, logger, account, client, clientCreator);
       discoverDbAuoraClusters(mapper, session, region, emitter, logger, account, client, clientCreator);
     }

@@ -128,23 +128,23 @@ public class S3Discovery implements AWSDiscovery {
           .withAwsRegion(region.toString())
           .build();
 
-        discoverEncryption(client, bucket, data);
+        /*discoverEncryption(client, bucket, data);
         discoverHosting(client, bucket, data);
-        discoverACLS(client, bucket, data);
+        discoverACLS(client, bucket, data);*/
         discoverPublicAccess(client, bucket, data);
-        discoverLogging(client, bucket, data);
+        /*discoverLogging(client, bucket, data);
         discoverMetrics(client, bucket, data);
-        discoverNotifications(client, bucket, data);
+        discoverNotifications(client, bucket, data);*/
         discoverBucketPolicy(client, bucket, data, mapper);
-        discoverObjectLockConfiguration(client, bucket, data);
+        /*discoverObjectLockConfiguration(client, bucket, data);
         discoverReplication(client, bucket, data);
-        discoverPublic(client, bucket, data, logger);
-        discoverIsEncrypted(client, bucket, data, logger);
+        discoverPublic(client, bucket, data, logger);*/
+        /*discoverIsEncrypted(client, bucket, data, logger);
         discoverVersioning(client, bucket, data);
-        discoverLifeCycleConfiguration(client, bucket, data);
+        discoverLifeCycleConfiguration(client, bucket, data);*/
         discoverBucketTags(client, bucket, data, mapper);
-        discoverSize(bucket, data, clientCreator);
-        discoverCloudWatchMetricsConfig(client, bucket, data, clientCreator, logger, mapper);
+        /*discoverSize(bucket, data, clientCreator);
+        discoverCloudWatchMetricsConfig(client, bucket, data, clientCreator, logger, mapper);*/
 
         emitter.emit(VersionedMagpieEnvelopeProvider.create(session, List.of(fullService() + ":bucket"), data.toJsonNode()));
       });

@@ -40,7 +40,7 @@ public class AWSDiscoveryPlugin implements OriginPlugin<AWSDiscoveryConfig> {
     .findAndRegisterModules();
 
   private static final List<AWSDiscovery> DISCOVERY_LIST = List.of(
-    new AthenaDiscovery(),
+    /*new AthenaDiscovery(),
     new BatchDiscovery(),
     new CassandraDiscovery(),
     new BackupDiscovery(),
@@ -71,20 +71,22 @@ public class AWSDiscoveryPlugin implements OriginPlugin<AWSDiscoveryConfig> {
     new LambdaDiscovery(),
     new LightsailDiscovery(),
     new LocationDiscovery(),
-    new QLDBDiscovery(),
+    new QLDBDiscovery(), */
     new S3Discovery(),
-    new SecretsManagerDiscovery(),
+/*    new SecretsManagerDiscovery(),
     new SecurityHubDiscovery(),
     new SNSDiscovery(),
     new SSMDiscovery(),
-    new StorageGatewayDiscovery(),
+    new StorageGatewayDiscovery(), */
     new RDSDiscovery(),
-    new RedshiftDiscovery(),
-    new Route53Discovery(),
+    new RedshiftDiscovery()
+/*    new Route53Discovery(),
     new KMSDiscovery(),
     new VPCDiscovery(),
     new RegionDiscovery(),
-    new OrganizationDiscovery());
+    new OrganizationDiscovery() */
+    );
+
 
   private Logger logger;
   private AWSDiscoveryConfig config;

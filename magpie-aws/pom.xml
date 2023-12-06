@@ -373,6 +373,69 @@
                 <goals>
                   <goal>shade</goal>
                 </goals>
+                  <configuration>
+                      <artifactSet>
+                          <excludes>
+                              <exclude>software.amazon.awssdk:docdb</exclude>
+                              <exclude>software.amazon.awssdk:organizations</exclude>
+                              <exclude>software.amazon.awssdk:neptune</exclude>
+                              <exclude>software.amazon.awssdk:sso</exclude>
+                              <exclude>software.amazon.awssdk:protocol-core</exclude>
+                              <exclude>software.amazon.awssdk:aws-json-protocol</exclude>
+                              <exclude>software.amazon.awssdk:third-party-jackson-core</exclude>
+                              <exclude>software.amazon.awssdk:json-utils</exclude>
+                              <exclude>software.amazon.awssdk:profiles</exclude>
+                              <exclude>software.amazon.awssdk:sdk-core</exclude>
+                              <exclude>software.amazon.awssdk:http-client-spi</exclude>
+                              <exclude>software.amazon.awssdk:regions</exclude>
+                              <exclude>software.amazon.awssdk:annotations</exclude>
+                              <exclude>software.amazon.awssdk:utils</exclude>
+                              <exclude>software.amazon.awssdk:aws-core</exclude>
+                              <exclude>software.amazon.awssdk:metrics-spi</exclude>
+                              <exclude>software.amazon.awssdk:apache-client</exclude>
+                              <exclude>software.amazon.awssdk:netty-nio-client</exclude>
+                              <exclude>software.amazon.awssdk:athena</exclude>
+                              <exclude>software.amazon.awssdk:batch</exclude>
+                              <exclude>software.amazon.awssdk:cloudfront</exclude>
+                              <exclude>software.amazon.awssdk:aws-xml-protocol</exclude>
+                              <exclude>software.amazon.awssdk:cloudsearch</exclude>
+                              <exclude>software.amazon.awssdk:cloudtrail</exclude>
+                              <exclude>software.amazon.awssdk:config</exclude>
+                              <exclude>software.amazon.awssdk:dynamodb</exclude>
+                              <exclude>software.amazon.awssdk:elasticbeanstalk</exclude>
+                              <exclude>software.amazon.awssdk:ec2</exclude>
+                              <exclude>software.amazon.awssdk:efs</exclude>
+                              <exclude>software.amazon.awssdk:eks</exclude>
+                              <exclude>software.amazon.awssdk:elasticache</exclude>
+                              <exclude>software.amazon.awssdk:ecs</exclude>
+                              <exclude>software.amazon.awssdk:elasticloadbalancing</exclude>
+                              <exclude>software.amazon.awssdk:elasticloadbalancingv2</exclude>
+                              <exclude>software.amazon.awssdk:elasticsearch</exclude>
+                              <exclude>software.amazon.awssdk:emr</exclude>
+                              <exclude>software.amazon.awssdk:fsx</exclude>
+                              <exclude>software.amazon.awssdk:glacier</exclude>
+                              <exclude>software.amazon.awssdk:iam</exclude>
+                              <exclude>software.amazon.awssdk:kms</exclude>
+                              <exclude>software.amazon.awssdk:lakeformation</exclude>
+                              <exclude>software.amazon.awssdk:lambda</exclude>
+                              <exclude>software.amazon.awssdk:location</exclude>
+                              <exclude>software.amazon.awssdk:lightsail</exclude>
+                              <exclude>software.amazon.awssdk:qldb</exclude>
+                              <exclude>software.amazon.awssdk:s3</exclude>
+                              <exclude>software.amazon.awssdk:arns</exclude>
+                              <exclude>software.amazon.awssdk:secretsmanager</exclude>
+                              <exclude>software.amazon.awssdk:sns</exclude>
+                              <exclude>software.amazon.awssdk:ssm</exclude>
+                              <exclude>software.amazon.awssdk:storagegateway</exclude>
+                              <exclude>software.amazon.awssdk:sts</exclude>
+                              <exclude>software.amazon.awssdk:route53</exclude>
+                              <exclude>software.amazon.awssdk:cloudwatchlogs</exclude>
+                              <exclude>software.amazon.awssdk:auth</exclude>
+                              <exclude>software.amazon.awssdk:guardduty</exclude>
+                              <exclude>software.amazon.awssdk:securityhub</exclude>
+                          </excludes>
+                      </artifactSet>
+                  </configuration>
               </execution>
             </executions>
           </plugin>
@@ -388,7 +451,7 @@
         <artifactId>maven-failsafe-plugin</artifactId>
         <version>3.0.0-M5</version>
         <configuration>
-          <runOrder>random</runOrder>
+            <runOrder>random</runOrder>
         </configuration>
         <executions>
           <execution>
